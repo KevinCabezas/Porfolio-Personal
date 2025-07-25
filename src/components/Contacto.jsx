@@ -10,10 +10,10 @@ export default function CONTACTO() {
 
     emailjs
       .sendForm(
-        "service_kd561eo",
-        "template_jypfade",
+        import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
+        import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
         form.current,
-        "DQG2nBfaXs2JQCYQR"
+        import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
