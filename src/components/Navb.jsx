@@ -7,7 +7,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'proyectos', 'habilidades', 'Sobre Mi', 'contacto'];
+      const sections = ['home', 'proyectos', 'habilidades', 'sobreMi', 'contacto'];
       const scrollPosition = window.scrollY + 100; // margen para detectar antes
 
       for (const id of sections) {
@@ -47,7 +47,7 @@ export default function Navbar() {
         <button className="md:hidden" onClick={() => setOpen(!open)}>☰</button>
 
         <nav className={`md:flex gap-6 ${open ? 'block' : 'hidden'} md:block mt-4 md:mt-0`}>
-          {['proyectos', 'habilidades', 'Sobre Mi', 'contacto'].map((id) => (
+          {['proyectos', 'habilidades', 'sobreMi', 'contacto'].map((id) => (
             <a
               key={id}
               href={`#${id}`}
