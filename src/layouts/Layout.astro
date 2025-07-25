@@ -1,0 +1,50 @@
+---
+import Navbar from "../components/Navb";
+import FooterPag from "../components/Footer";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body>
+		<Navbar client:load />
+		<main>
+			<slot />
+		</main>
+		<FooterPag client:load/>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		/* Variables si querés usar colores, fuentes, etc. */
+		--font-base: "Inter", sans-serif;
+		--color-bg: #665a32;
+		--color-text: #f8fafc;
+	}
+
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: var(--font-base);
+		background-color: var(--color-bg); /* ✅ color base de fondo */
+		color: var(--color-text);
+		scroll-behavior: smooth; /* ✅ scroll suave al hacer clic en el navbar */
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+</style>

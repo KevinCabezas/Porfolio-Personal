@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Portada from "../components/Portada";
+import Proyectos from "../components/Proyectos";
+import Habilidades from "../components/Habilidades";
+import Contacto from "../components/Contacto";
+---
+
+<Layout>
+	<section id="home">
+    <Portada />
+		<h1></h1>
+  </section>
+
+  <section id="proyectos">
+    <Proyectos />
+  </section>
+
+  <section id="habilidades">
+    <Habilidades />
+  </section>
+
+  <section id="contacto">
+    <Contacto client:load />
+  </section>
+</Layout>
